@@ -1,0 +1,596 @@
+<link rel="shortcut icon" type="image/x-icon" href="http://indoconx.com/wp-content/uploads/2015/02/favicon.png">
+<link rel="stylesheet" id="unite-bootstrap-css" href="http://indoconx.com/wp-content/themes/unite/inc/css/bootstrap.min.css?ver=4.3.1" type="text/css" media="all">
+<style type="text/css">
+	* html .goog-inline-block,
+	*:first-child + html .goog-inline-block {
+	display: inline;
+	}
+	body {
+	color: #333333;
+	font: normal normal 400 14px 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+	margin: 0;
+	line-height: 1.2;
+	padding: 0 1em;
+	background-color: white;
+	}
+	.ss-question-list .ss-form-question:nth-child(odd) {
+    border-bottom: 1px solid #ccc;
+    background-color: #F3F3F3;
+	}
+	.ss-form-question {
+    padding: 5px 15px;
+	}
+	input,
+	textarea {
+	outline: none;
+	}
+	.ss-form-question .ss-item-required .required-message {
+    display: block;
+	}
+	.ss-form-question .required-message {
+    display: none;
+	}
+	.required-message {
+    font-size: 12px;
+    font-style: italic;
+	}
+	/* label {
+    display: block;
+	} */
+	input[type=email],  textarea {
+    display: block;
+	}
+	/* .container {
+	margin: 0 auto;
+	width: 960px;
+	} */
+	.ss-logo-link {
+	display: block;
+	}
+	.ss-logo {
+	border: none;
+	height: 23px;
+	width: 105px;
+	}
+	.g {
+	color: #333333;
+	}
+	.ss-form-desc {
+	font: inherit;
+	width: 99%;
+	margin: 0;
+	}
+	.ss-powered-by {
+	display: block;
+	clear: left;
+	color: #333333;
+	margin: 1em 0.2em 0.2em;
+	}
+	.ss-powered-by a:link,
+	.ss-powered-by a:visited {
+	color: #333333;
+	}
+	.ss-required-asterisk {
+	color: #d10002;
+	}
+	.ss-no-ignore-whitespace {
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	}
+	.ss-confirmation-header {
+	font-size: 140%;
+	padding-bottom: 1em;
+	}
+	.ss-abuse-header {
+	background: #fff68f;
+	line-height: 1.3em;
+	margin: 0 auto 1em;
+	padding: 0.5em;
+	width: 97%;
+	}
+	.ss-navigate {
+	clear: both;
+	}
+	.form-error-arg {
+	font-weight: bold;
+	}
+	h1 {
+	font-size: 1.8em;
+	padding: 0;
+	}
+	hr {
+	border: 0;
+	height: 1px;
+	background-color: #cccccc;
+	}
+	table {
+	border-collapse: collapse;
+	}
+	textarea {
+	font: normal 13px arial, sans-serif;
+	}
+	br {
+	display: block !important;
+	}
+	.aria-only-help {
+	font-size: 0;
+	left: -9999px;
+	position: absolute;
+	}
+	.ss-printable-hint {
+	display: none;
+	}
+	.goog-date-picker,
+	.goog-date-picker th,
+	.goog-date-picker td {
+	font: 13px Arial, sans-serif;
+	}
+	.goog-date-picker {
+	-moz-user-focus: normal;
+	-moz-user-select: none;
+	position: relative;
+	border: 1px solid #000000;
+	float: left;
+	padding: 2px;
+	color: #000000;
+	background: #333333;
+	cursor: default;
+	}
+	.goog-date-picker th {
+	text-align: center;
+	}
+	.goog-date-picker td {
+	text-align: center;
+	vertical-align: middle;
+	padding: 1px 3px;
+	}
+	.goog-date-picker-menu {
+	position: absolute;
+	background: #333333;
+	border: 1px solid gray;
+	-moz-user-focus: normal;
+	z-index: 1;
+	outline: none;
+	}
+	.goog-date-picker-menu ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	}
+	.goog-date-picker-menu ul li {
+	cursor: default;
+	}
+	.goog-date-picker-menu-selected {
+	background: #ccccff;
+	}
+	.goog-date-picker th {
+	font-size: 0.9em;
+	}
+	.goog-date-picker td div {
+	float: left;
+	}
+	.goog-date-picker button {
+	padding: 0px;
+	margin: 1px 0;
+	border: 0;
+	color: #2200cc;
+	font-weight: bold;
+	background: transparent;
+	}
+	.goog-date-picker-date {
+	background: #ffffff;
+	}
+	.goog-date-picker-week,
+	.goog-date-picker-wday {
+	padding: 1px 3px;
+	border: 0;
+	border-color: #a2bbdd;
+	border-style: solid;
+	}
+	.goog-date-picker-week {
+	border-right-width: 1px;
+	}
+	.goog-date-picker-wday {
+	border-bottom-width: 1px;
+	}
+	.goog-date-picker-head td {
+	text-align: center;
+	}
+	td.goog-date-picker-today-cont {
+	text-align: center;
+	}
+	td.goog-date-picker-none-cont {
+	text-align: center;
+	}
+	.goog-date-picker-month {
+	width: 11ex;
+	}
+	.goog-date-picker-year {
+	width: 6ex;
+	}
+	.goog-date-picker table {
+	border-collapse: collapse;
+	}
+	.goog-date-picker-other-month {
+	color: #888888;
+	}
+	.goog-date-picker-wkend-start,
+	.goog-date-picker-wkend-end {
+	background: #eeeeee;
+	}
+	td.goog-date-picker-selected {
+	background: #333333;
+	}
+	.goog-date-picker-today {
+	background: #99aabb;
+	font-weight: bold!important;
+	border-color: #224466 #99bbdd #99bbdd #224466;
+	color: #ffffff;
+	}
+	.ss-date input,
+	.ss-datetime input,
+	.ss-time input {
+	font: inherit;
+	}
+	.ss-q-time.goog-inline-block {
+	padding-left: 1.5em;
+	}
+	.ss-hidden-button {
+	border: none;
+	display: none;
+	height: 0;
+	padding: 0;
+	width: 0;
+	}
+	.ss-picker-button-container {
+	background-color: #f5f5f5;
+	background-image: -webkit-linear-gradient(top, #f5f5f5, #f1f1f1);
+	background-image: -moz-linear-gradient(top, #f5f5f5, #f1f1f1);
+	background-image: -ms-linear-gradient(top, #f5f5f5, #f1f1f1);
+	background-image: -o-linear-gradient(top, #f5f5f5, #f1f1f1);
+	background-image: linear-gradient(top, #f5f5f5, #f1f1f1);
+	height: 100%;
+	margin-left: 1ex;
+	}
+	.ss-picker-container {
+	left: 2ex;
+	position: absolute;
+	z-index: 2;
+	}
+	.ss-calendar-button {
+	border-left: 1px solid #dcdcdc;
+	padding: 5px 4px 4px 4px;
+	z-index: 1;
+	}
+	.ss-datetime-box {
+	border: 1px solid #dcdcdc;
+	height: 32px;
+	margin-right: 0.6em;
+	min-height: 30px;
+	padding-left: 3px;
+	vertical-align: middle;
+	}
+	.ss-datetime-box select {
+	margin: 4px 3px;
+	vertical-align: middle;
+	}
+	.ss-datetime-box-spacer {
+	height: 32px;
+	vertical-align: middle;
+	}
+	.ss-grid {
+	overflow-x: auto;
+	}
+	.ss-gridnumbers {
+	text-align: center;
+	border-bottom: 1px solid #d3d8d3;
+	}
+	.ss-gridnumber {
+	display: block;
+	padding: 0.5em 0 .5em;
+	}
+	.ss-gridrow {
+	text-align: center;
+	color: #333333;
+	border-bottom: 1px solid #d3d8d3;
+	padding: .5em .25em;
+	}
+	.ss-grid-row-even {
+	background-color: #ffffff;
+	}
+	.ss-grid-row-odd {
+	background-color: #f8f8f8;
+	}
+	.ss-gridrow-leftlabel {
+	min-width: 100px;
+	max-width: 200px;
+	padding-left: 15px;
+	text-align: left;
+	}
+	.ss-grideditor-columns input {
+	line-height: 150%;
+	}
+	.ss-grideditor-editor .ss-magiclist-ul span.ss-header {
+	font-weight: bold;
+	padding-right: 1em;
+	}
+	.ss-grid-separator {
+	border: 1px solid #e5e5e5;
+	}
+	.ss-scalenumbers {
+	text-align: center;
+	}
+	.ss-scalenumber {
+	display: block;
+	padding: 0.5em 0 .5em;
+	}
+	.ss-scalerow {
+	text-align: center;
+	color: #333333;
+	border: 1px solid #d3d8d3;
+	border-left: 0;
+	border-right: 0;
+	padding: .5em .25em;
+	}
+	td.ss-leftlabel {
+	text-align: right;
+	padding-left: 0;
+	}
+	td.ss-rightlabel {
+	text-align: left;
+	padding-right: 0;
+	}
+	.ss-form-entry {
+	margin-bottom: 1.5em;
+	}
+	.ss-form-entry input {
+	vertical-align: middle;
+	margin-left: 0;
+	margin-top: 0;
+	}
+	.ss-form-entry select {
+	max-width: 100%;
+	}
+	.ss-q-title {
+	display: block;
+	font-weight: bold;
+	}
+	.ss-q-help {
+	display: block;
+	margin: .1em 0 .25em 0;
+	}
+	.ss-secondary-text {
+	color: #333333;
+	}
+	.ss-textarea {
+	max-width: 99%;
+	}
+	.ss-q-long {
+	resize: vertical;
+	width: 70%;
+	}
+	.ss-choices {
+	list-style: none;
+	margin: .5em 0 0 0;
+	padding: 0;
+	}
+	.ss-choice-item {
+	margin: 0;
+	line-height: 1.3em;
+	padding-bottom: .5em;
+	display: block;
+	}
+	.ss-required-asterisk {
+	color: #d10002;
+	}
+	.ss-section-title {
+	background-color: #eeeeee;
+	padding: 0.4em;
+	margin: 2em -0.4em 0;
+	}
+	.ss-section-description {
+	margin-top: 0.5em;
+	}
+	.ss-page-title {
+	margin: 0;
+	padding: 0;
+	}
+	.ss-formwidget-container:focus {
+	outline: none;
+	}
+	.ss-item {
+	margin: 12px 0;
+	}
+	.ss-image,
+	.ss-image-container {
+	max-width: 100%;
+	}
+	.ss-image:focus {
+	outline: none;
+	}
+	.img-menu .jfk-button-collapse-left {
+	margin-right: 0;
+	}
+	.ss-edit-link,
+	.ss-edit-link:active,
+	.ss-edit-link:visited,
+	.ss-edit-link:hover,
+	.ss-edit-link:link {
+	background: url(//www.gstatic.com/docs/spreadsheets/forms/edit_dark.png) 7px 8px no-repeat #1f1f1d;
+	border: 1px solid #fff;
+	color: #fff;
+	float: right;
+	font: normal 13px arial, sans-serif;
+	font-weight: bold;
+	padding: 7px 7px 7px 27px;
+	text-decoration: none;
+	}
+	.disclaimer .ss-terms a:link {
+	color: #1155cc;
+	text-decoration: none;
+	}
+	.disclaimer .ss-terms a:hover {
+	text-decoration: underline;
+	}
+	.disclaimer .ss-terms a:active {
+	color: #d14836;
+	}
+	.disclaimer .ss-terms a:visited {
+	color: #6611cc;
+	}
+	.disclaimer {
+	color: #777777;
+	font: normal 11px arial, sans-serif;
+	margin-top: 11px;
+	}
+	.disclaimer-separator {
+	border-top: 1px solid #ebebeb;
+	}
+	.disclaimer .ss-logo-link {
+	color: #777777;
+	text-decoration: none;
+	}
+	.powered-by-logo {
+	display: inline-block;
+	vertical-align: bottom;
+	}
+	.powered-by-text {
+	line-height: 16px;
+	}
+	.ss-terms {
+	display: inline-block;
+	line-height: 20px;
+	width: 80%;
+	text-align: center;
+	}
+	.ss-submit-message {
+	font: normal 13px arial, sans-serif;
+	margin-bottom: 20px;
+	}
+	.ss-form-container {
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	margin: 0.5em auto 0;
+	padding: 1em;
+	width: 45em;
+	}
+	.ss-editing-response {
+	border: 1px solid #cccccc;
+	margin: 1em auto;
+	padding: 0 1em;
+	width: 43em;
+	}
+	.ss-confirmation-banner,
+	.ss-editing-response {
+	background-color: #ffff87;
+	}
+	.errorbox-bad {
+	border: 2px solid #d10002;
+	background-color: #ffe6cc;
+	padding: 2px;
+	}
+	.errorheader {
+	color: #d10002;
+	}
+	input#emailReceipt {
+	margin-left: 0;
+	margin-top: 0;
+	vertical-align: middle;
+	}
+	.no-chrome .powered-by-logo,
+	.no-chrome .ss-legal,
+	.no-chrome .ss-edit-link {
+	display: none;
+	}
+	.ss-prepopulate-input,
+	.ss-submit-url-input {
+	width: 100%;
+	}
+</style>
+<div class="container">
+	<div class="row">
+	<h3>Website Feedback</h3>
+		<script type="text/javascript">var submitted=false;</script>
+		<iframe name="hidden_iframe" id="hidden_iframe"
+		style="display:none;" onload="if(submitted)
+		{window.location='http://indoconx.com/thankyou.php';}"></iframe>
+		
+		<form action="https://docs.google.com/forms/d/1uzqSFqXDHGM4Mc7oLuotwpCao4B-dZgehjJBJNC8QLw/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;"> <ol role="list" class="ss-question-list" style="padding-left: 0">
+			<div class="ss-form-question errorbox-good" role="listitem">
+				<div dir="auto" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
+					<label class="ss-q-item-label" for="entry_1183070782"><div class="ss-q-title">Your Email
+						<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+					<span class="ss-required-asterisk" aria-hidden="true">*</span></div>
+					<div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
+					<input type="email" name="entry.1183070782" value="" class="ss-q-short" id="entry_1183070782" dir="auto" aria-label="Your Email  Must be a valid email address" aria-required="true" required="" title="Must be a valid email address">
+					<div class="error-message" id="1098908591_errorMessage">Must be a valid email address</div>
+					<div class="required-message">This is a required question</div>
+				</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+				<div dir="auto" class="ss-item  ss-radio"><div class="ss-form-entry">
+					<label class="ss-q-item-label" for="entry_646130150"><div class="ss-q-title">How often do you visit our website?
+					</div>
+					<div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
+					
+					<ul class="ss-choices" role="radiogroup" aria-label="How often do you visit our website?  "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.928187933" value="Daily" id="group_928187933_1" role="radio" class="ss-q-radio" aria-label="Daily"></span>
+						<span class="ss-choice-label">Daily</span>
+						</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.928187933" value="Several times each week" id="group_928187933_2" role="radio" class="ss-q-radio" aria-label="Several times each week"></span>
+						<span class="ss-choice-label">Several times each week</span>
+						</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.928187933" value="Once a week" id="group_928187933_3" role="radio" class="ss-q-radio" aria-label="Once a week"></span>
+						<span class="ss-choice-label">Once a week</span>
+						</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.928187933" value="Several times each month" id="group_928187933_4" role="radio" class="ss-q-radio" aria-label="Several times each month"></span>
+						<span class="ss-choice-label">Several times each month</span>
+						</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.928187933" value="Once a month" id="group_928187933_5" role="radio" class="ss-q-radio" aria-label="Once a month"></span>
+						<span class="ss-choice-label">Once a month</span>
+						</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.928187933" value="Less than Once a month" id="group_928187933_6" role="radio" class="ss-q-radio" aria-label="Less than Once a month"></span>
+						<span class="ss-choice-label">Less than Once a month</span>
+					</label></li></ul>
+					<div class="error-message" id="646130150_errorMessage"></div>
+				<div class="required-message">This is a required question</div></div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+				<div dir="auto" class="ss-item  ss-scale"><div class="ss-form-entry">
+					<label class="ss-q-item-label" for="entry_1801441821"><div class="ss-q-title">Please rate your overall satisfaction with our website.
+					</div>
+					<div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
+					
+					<table border="0" cellpadding="5" cellspacing="0" id="entry_1543956340"><tbody><tr aria-hidden="true"><td class="ss-scalenumbers"></td>
+						<td class="ss-scalenumbers"><label class="ss-scalenumber" for="group_1543956340_1">1</label></td> <td class="ss-scalenumbers"><label class="ss-scalenumber" for="group_1543956340_2">2</label></td> <td class="ss-scalenumbers"><label class="ss-scalenumber" for="group_1543956340_3">3</label></td> <td class="ss-scalenumbers"><label class="ss-scalenumber" for="group_1543956340_4">4</label></td> <td class="ss-scalenumbers"><label class="ss-scalenumber" for="group_1543956340_5">5</label></td>
+					<td class="ss-scalenumbers"></td></tr>
+					<tr role="radiogroup" aria-label="Please rate your overall satisfaction with our website.  Select a value from a range from 1,Very dissatisfied, to 5,Very satisfied,."><td class="ss-scalerow ss-leftlabel"><div aria-hidden="true" class="aria-todo">Very dissatisfied</div></td>
+						<td class="ss-scalerow"><div class="ss-scalerow-fieldcell"><input type="radio" name="entry.1543956340" value="1" id="group_1543956340_1" role="radio" class="ss-q-radio" aria-label="1"></div></td> <td class="ss-scalerow"><div class="ss-scalerow-fieldcell"><input type="radio" name="entry.1543956340" value="2" id="group_1543956340_2" role="radio" class="ss-q-radio" aria-label="2"></div></td> <td class="ss-scalerow"><div class="ss-scalerow-fieldcell"><input type="radio" name="entry.1543956340" value="3" id="group_1543956340_3" role="radio" class="ss-q-radio" aria-label="3"></div></td> <td class="ss-scalerow"><div class="ss-scalerow-fieldcell"><input type="radio" name="entry.1543956340" value="4" id="group_1543956340_4" role="radio" class="ss-q-radio" aria-label="4"></div></td> <td class="ss-scalerow"><div class="ss-scalerow-fieldcell"><input type="radio" name="entry.1543956340" value="5" id="group_1543956340_5" role="radio" class="ss-q-radio" aria-label="5"></div></td>
+					<td class="ss-scalerow ss-rightlabel" aria-hidden="true">Very satisfied</td></tr></tbody></table>
+				<div class="required-message">This is a required question</div></div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+				<div dir="auto" class="ss-item  ss-paragraph-text"><div class="ss-form-entry">
+					<label class="ss-q-item-label" for="entry_133767138"><div class="ss-q-title">How can we improve our website?
+					</div>
+					<div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
+					<textarea name="entry.133767138" rows="8" cols="0" class="ss-q-long" id="entry_133767138" dir="auto" aria-label="How can we improve our website?  "></textarea>
+					<div class="error-message" id="1543604929_errorMessage"></div>
+					<div class="required-message">This is a required question</div>
+				</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+				<div dir="auto" class="ss-item  ss-paragraph-text"><div class="ss-form-entry">
+					<label class="ss-q-item-label" for="entry_1289890420"><div class="ss-q-title">What would you like to see more of on our website?
+					</div>
+					<div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
+					<textarea name="entry.1289890420" rows="8" cols="0" class="ss-q-long" id="entry_1289890420" dir="auto" aria-label="What would you like to see more of on our website?  "></textarea>
+					<div class="error-message" id="685073306_errorMessage"></div>
+					<div class="required-message">This is a required question</div>
+				</div></div></div>
+				<input type="hidden" name="draftResponse" value="[,,&quot;7063477316291892746&quot;]
+				">
+				<input type="hidden" name="pageHistory" value="0">
+				
+				<input type="hidden" name="fvv" value="0">
+				
+				
+				<input type="hidden" name="fbzx" value="7063477316291892746">
+				
+				<div class="ss-item ss-navigate"><table id="navigation-table"><tbody><tr><td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
+					<input type="submit" name="submit" value="Submit" id="ss-submit" class="jfk-button jfk-button-action btn btn-primary btn-block ">
+				<div class="ss-password-warning ss-secondary-text"></div></td>
+				</tr>
+				</tbody>
+				</table>
+				</div>
+		</ol>
+		</form>
+	</div>
+</div>
