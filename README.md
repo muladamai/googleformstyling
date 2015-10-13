@@ -19,9 +19,9 @@ STEP 5.
 When you have finished compiling your form, click the link at the bottom of the page titled: ‘You can view the published form here’
 
 Here’s an example of what it should look like:
-
+```
 http://spreadsheets.google.com/viewform?key=pqbhTz7PIHum_4qKEdbUWVg
-
+```
 STEP 6.
 Right click anywhere on the page and click View Source to look at the code behind the form.
 
@@ -43,13 +43,19 @@ Now you have a beautifully styled form but it still sends users to an ugly Googl
 Add a bit of javascript* to redirect the completed page to a confirmation page** of your choosing:
 
 REPLACE:
-
+```
 <form action="YOUR-EMBEDDED-GOOGLE-SPREADSHEET-LINK" method="POST">
+```
 WITH:
-
+```
 <script type="text/javascript">var submitted=false;</script>
 <iframe name="hidden_iframe" id="hidden_iframe"
 style="display:none;" onload="if(submitted)
 {window.location='http://YOUR-THANK-YOU-PAGE-URL';}"></iframe>
 <form action="YOUR-EMBEDDED-GOOGLE-SPREADSHEET-LINK" method="post"
 target="hidden_iframe" onsubmit="submitted=true;">
+```
+
+Learn how to add form validation and email verification to your styled Google Forms with [Google Forms and jQuery Validation tutorial][1].
+
+ [1]: http://math.stackexchange.com/
